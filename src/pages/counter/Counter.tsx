@@ -8,10 +8,10 @@ import {
   incrementAsync,
   incrementIfOdd,
   selectCount,
-} from './counterSlice';
+} from '../../features/counter/counterSlice';
 import styles from './Counter.module.css';
 
-export function Counter() {
+export default function Counter({children}: any) {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
@@ -63,6 +63,7 @@ export function Counter() {
           Add If Odd
         </button>
       </div>
+      {children}
     </div>
   );
 }
