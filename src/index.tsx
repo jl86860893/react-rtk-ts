@@ -1,20 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { store } from './app/store';
 import { Provider } from 'react-redux';
-import Home from '@/pages/home'
+import routes from "@/config/router.config"
+import RenderRoutes from "@/utils/router";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path='/' component={Home} />
-          </Switch>
-        </BrowserRouter>
+      <RenderRoutes routes={routes}/>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

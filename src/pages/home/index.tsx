@@ -1,7 +1,10 @@
 import React from 'react';
+import styles from './index.module.less'
 
 export default function Home() {
-    return (
-        <div>123456</div>
-    )
+  return (
+    <div className={styles.homeWrapper}>
+      
+    </div>
+  )
 }
