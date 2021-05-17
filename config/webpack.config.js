@@ -453,6 +453,11 @@ module.exports = function (webpackEnv) {
                   ],
                 ],
                 cacheDirectory: true,
+                plugins: [
+                  // 引入样式为 css
+                  // style为true 则默认引入less
+                  ['import', { libraryName: 'antd', style: true }],
+                ],
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
                 
