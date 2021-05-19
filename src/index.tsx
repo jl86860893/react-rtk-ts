@@ -11,13 +11,11 @@ import RenderRoutes from "@/utils/router";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <ConfigProvider locale={zhCN}>
-        <RenderRoutes routes={routes}/>
-      </ConfigProvider>
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <ConfigProvider locale={zhCN}>
+      <RenderRoutes routes={routes}/>
+    </ConfigProvider>
+  </Provider>,
   document.getElementById('root')
 );
 

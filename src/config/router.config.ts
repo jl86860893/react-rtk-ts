@@ -13,6 +13,10 @@ const routes: RvcRouteConfig[] = [
       {
         path: '/home',
         component: 'pages/home/index'
+      },
+      {
+        path: '/cacheManagement',
+        component: 'pages/cacheManagement/index'
       }
     ]
   },

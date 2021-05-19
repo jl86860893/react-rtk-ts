@@ -751,5 +751,17 @@ module.exports = function (webpackEnv) {
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
     performance: false,
+    devServer: {
+      proxy: {
+        '/api': {
+          target: 'http://55.11.54.120:18086',
+          changeOrigin: true,
+          secure: false,
+          pathRewrite: {
+            '^/api': ''
+          }
+        }
+      }
+    }
   };
 };

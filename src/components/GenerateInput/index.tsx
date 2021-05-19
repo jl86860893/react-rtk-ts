@@ -55,7 +55,7 @@ export default function GenerateInput(props: any) {
         initialValue={initialValue}
         {...otherProps}
       >
-        <Select {...comProps} style={{ width: 120 }}>
+        <Select {...comProps}>
           {optionDom}
         </Select>
       </Form.Item>
